@@ -4,7 +4,7 @@
 
 <template>
     <div class="flex flex-col justify-between size-full">
-        <header class="text-red">
+        <header>
             <slot name="header" />
         </header>
         <main class="flex-grow">
