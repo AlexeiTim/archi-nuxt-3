@@ -105,7 +105,7 @@ function handleNextSlide() {
         <div class="flex gap-[13px] items-center">
           <div class="text-dark">01</div>
           <div class="w-[200px] h-[1px] bg-dark_green bg-opacity-38 relative">
-                <div class="bg-dark_green h-[1px] absolute top-0 z-10" :style="{width: `${Math.floor(100 / data.length * (initIndex + 1))}%`}" />
+                <div class="bg-dark_green h-[1px] transition absolute top-0 z-10" :style="{width: `${Math.floor(100 / data.length * (initIndex + 1))}%`, transition: 'width'}" />
           </div>
           <div class="text-dark">0{{data.length}}</div>
         </div>
