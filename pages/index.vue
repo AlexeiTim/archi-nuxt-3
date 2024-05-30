@@ -50,16 +50,16 @@ function handleChangeSlide(value: number) {
         <div class="flex flex-col h-full w-full max-w-[1190px] px-[10px] m-auto">
             <BaseHeader @show-menu="handleShowMenu" :active-lang="activeLang"
                 @change-active-lang="handleChangeActiveLang" />
-
+            <!-- 
             <BaseContent :active-slide="activeSlide" />
 
-            <BaseFooter @change-slide="handleChangeSlide" :active-index="initIndex" :slides="slides" />
+            <BaseFooter @change-slide="handleChangeSlide" :active-index="initIndex" :slides="slides" /> -->
         </div>
     </div>
-    <Transition>
+    <!-- <Transition>
         <Menu v-if="showMenu" @show-menu="handleShowMenu" :active-lang="activeLang"
             @change-active-lang="handleChangeActiveLang" />
-    </Transition>
+    </Transition> -->
 </template>
 
 <style scoped></style>
