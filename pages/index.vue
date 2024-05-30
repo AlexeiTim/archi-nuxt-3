@@ -28,16 +28,16 @@ async function loadSlides() {
   }
 }
 
-onMounted(async () => {
-  await loadSlides();
-});
-
 function handleChangeSlide(value: number) {
   initIndex.value += value;
 
   if (initIndex.value > slides.value!.length - 1) initIndex.value = 0;
   else if (initIndex.value < 0) initIndex.value = slides.value!.length - 1;
 }
+
+onMounted(async () => {
+  await loadSlides();
+});
 </script>
 
 <template>
