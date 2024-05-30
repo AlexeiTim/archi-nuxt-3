@@ -8,12 +8,14 @@ const props = defineProps<{
 
 <template>
     <main class="flex flex-col flex-grow">
-        <div class="w-[666px] mt-[305px] flex flex-col gap-10">
-            <h1 class="text-dark_green text-[96px]/[20.73px] mb-[47px] font-bold transition-all ease-out">
+        <div class="w-auto lg:w-[666px] mt-10 lg:mt-[305px] flex flex-col gap-4 lg:gap-10">
+            <h1
+                class="text-dark_green text-[64px]/[20.73px] lg:text-[96px]/[20.73px] mb-[47px] font-bold transition-all ease-out text-center lg:text-start">
                 {{ props.activeSlide?.title }}
             </h1>
-            <div class="flex gap-[58px]">
-                <div v-for="description in props.activeSlide?.description" class="flex flex-col gap-2.5 w-[285px]">
+            <div class="flex flex-col items-center lg:items-start lg:flex-row gap-[58px]">
+                <div v-for="description in props.activeSlide?.description"
+                    class="flex flex-col gap-2.5 w-[75%] sm:w-[50%] lg:w-[285px]">
                     <h2 class="text-dark_green text-[18px]/[21.06px] font-['FuturaDemiC'] font-bold">
                         {{ description.title }}
                     </h2>
@@ -22,7 +24,7 @@ const props = defineProps<{
                     </p>
                 </div>
             </div>
-            <div class="flex gap-10 items-center">
+            <div class="flex gap-10 items-center lg:items-start flex-col-reverse lg:flex-row">
                 <div class="relative cursor-pointer hover:bg-dark_green bg-bg_button transition rounded-[5px]">
                     <button
                         class="w-[200px] h-[46px] text-white rounded-[5px] border-none font-['FuturaDemiC'] font-bold">

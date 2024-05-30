@@ -41,19 +41,16 @@ function handleChangeSlide(value: number) {
 </script>
 
 <template>
-    <div class="size-full transition-all" :style="{
-        backgroundImage: `url(${activeSlide?.image})`,
-        backgroundSize: '100% 100%',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-    }">
+    <div class="size-full lg:bg-[length:100%_100%] bg-contain bg-no-repeat bg-bottom lg:bg-center transition-all"
+        :style="{
+            backgroundImage: `url(${activeSlide?.image})`,
+        }">
         <div class="flex flex-col h-full w-full max-w-[1190px] px-[10px] m-auto">
             <BaseHeader @show-menu="handleShowMenu" :active-lang="activeLang"
                 @change-active-lang="handleChangeActiveLang" />
-            <!-- 
             <BaseContent :active-slide="activeSlide" />
 
-            <BaseFooter @change-slide="handleChangeSlide" :active-index="initIndex" :slides="slides" /> -->
+            <BaseFooter @change-slide="handleChangeSlide" :active-index="initIndex" :slides="slides" />
         </div>
     </div>
     <!-- <Transition>
