@@ -24,7 +24,7 @@ const props = defineProps<{
                     </p>
                 </div>
             </div>
-            <div class="flex gap-10 items-center lg:items-start flex-col-reverse lg:flex-row">
+            <div class="flex gap-10 items-center lg:items-center flex-col-reverse lg:flex-row">
                 <div class="relative cursor-pointer hover:bg-dark_green bg-bg_button transition rounded-[5px]">
                     <button
                         class="w-[200px] h-[46px] text-white rounded-[5px] border-none font-['FuturaDemiC'] font-bold">
