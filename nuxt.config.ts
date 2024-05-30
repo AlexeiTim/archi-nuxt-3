@@ -11,5 +11,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", 'nuxt-icon']
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/fonts", 'nuxt-icon'],
+  runtimeConfig: {
+    public: {
+      apiUrl:'https://664878da2bb946cf2fa0af05.mockapi.io/',
+    }
+  },
 })
