@@ -13,8 +13,8 @@ const emits = defineEmits<{
 </script>
 
 <template>
-    <div class="flex items-center justify-between">
-        <div class="flex gap-10 items-center py-10">
+    <div class="flex items-center justify-between py-2 md:p-10">
+        <div class="flex gap-2 md:gap-5 items-center">
             <RouterLink to="/">
                 <h3 class="text-[24px]/[32px] text-main font-bold">AR.CHI</h3>
             </RouterLink>
@@ -29,10 +29,10 @@ const emits = defineEmits<{
             </div>
         </div>
 
-        <div class="flex group items-center gap-[14px] py-10 cursor-pointer  hover:scale-105 transition"
+        <div class="flex group items-center gap-[14px] cursor-pointer  hover:scale-105 transition"
             @click="emits('show-menu', false)">
             <span
-                class="text-['FuturaDemiC'] group-hover:text-dark_green font-semibold text-[16px]/[18.92px] text-black">Close</span>
+                class="text-['FuturaDemiC'] group-hover:text-dark_green font-semibold text-[16px]/[18.92px] text-black hidden md:inline">Close</span>
             <IconClose class="size-[20px] group-hover:text-dark_green" />
         </div>
     </div>

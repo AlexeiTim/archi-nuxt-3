@@ -18,12 +18,10 @@ const emits = defineEmits<{
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     }">
-        <div class="flex flex-col h-full w-full max-w-[1190px] m-auto">
+        <div class="flex flex-col h-full w-full max-w-[1190px] m-auto px-2">
             <MenuHeader @cange-active-lang="(value: Language) => emits('change-active-lang', value)"
                 :active-lang="props.activeLang" @show-menu="(value: boolean) => emits('show-menu', value)" />
-
             <MenuContent />
-
             <MenuFooter />
         </div>
     </div>

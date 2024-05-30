@@ -8,12 +8,12 @@ const props = defineProps<{
 
 <template>
     <main class="flex flex-col flex-grow">
-        <div class="w-auto lg:w-[666px] mt-10 lg:mt-[305px] flex flex-col gap-4 lg:gap-10">
+        <div class="w-auto lg:w-[666px] mt-10 lg:mt-[305px] flex flex-col gap-2 lg:gap-10">
             <h1
                 class="text-dark_green text-[64px]/[20.73px] lg:text-[96px]/[20.73px] mb-[47px] font-bold transition-all ease-out text-center lg:text-start">
                 {{ props.activeSlide?.title }}
             </h1>
-            <div class="flex flex-col items-center lg:items-start lg:flex-row gap-[58px]">
+            <div class="flex flex-col items-center lg:items-start lg:flex-row gap-2 lg:gap-[58px]">
                 <div v-for="description in props.activeSlide?.description"
                     class="flex flex-col gap-2.5 w-[75%] sm:w-[50%] lg:w-[285px]">
                     <h2 class="text-dark_green text-[18px]/[21.06px] font-['FuturaDemiC'] font-bold">

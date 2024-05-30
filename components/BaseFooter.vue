@@ -14,7 +14,7 @@ const emits = defineEmits<{
 
 <template>
     <footer
-        class="flex flex-col-reverse items-center lg:items-start gap-4 lg:gap-[177px] md:flex md:flex-row py-[61px]">
+        class="flex flex-col-reverse items-center lg:items-start gap-4 lg:gap-[177px] md:flex md:flex-row py-5 lg:py-[61px]">
         <ul class="flex gap-[35px]">
             <li v-for="link in FOOTER_NAV_LINKS" :key="link.id"
                 class="text-sub text-['FuturaDemiC'] text-[16px]/[18.72px] font-semibold font-sans hover:text-dark_green transition">

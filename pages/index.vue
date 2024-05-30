@@ -41,7 +41,7 @@ function handleChangeSlide(value: number) {
 </script>
 
 <template>
-    <div class="size-full lg:bg-[length:100%_100%] bg-contain bg-no-repeat bg-bottom lg:bg-center transition-all"
+    <div class="size-full  bg-[#F3F3F3] lg:bg-[length:100%_100%] sm:bg-[length:100%_50%] bg-[length:0%_0%] md:bg-[length:100%_70%] bg-no-repeat bg-right-bottom lg:bg-center transition-all"
         :style="{
             backgroundImage: `url(${activeSlide?.image})`,
         }">
@@ -49,14 +49,13 @@ function handleChangeSlide(value: number) {
             <BaseHeader @show-menu="handleShowMenu" :active-lang="activeLang"
                 @change-active-lang="handleChangeActiveLang" />
             <BaseContent :active-slide="activeSlide" />
-
             <BaseFooter @change-slide="handleChangeSlide" :active-index="initIndex" :slides="slides" />
         </div>
     </div>
-    <!-- <Transition>
+    <Transition>
         <Menu v-if="showMenu" @show-menu="handleShowMenu" :active-lang="activeLang"
             @change-active-lang="handleChangeActiveLang" />
-    </Transition> -->
+    </Transition>
 </template>
 
 <style scoped></style>

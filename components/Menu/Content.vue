@@ -16,7 +16,7 @@ function handleChangeHoveredLink(image: (typeof MENU_LINKS)[0] | null) {
                 <ul class="flex flex-col gap-10">
                     <li @mouseenter="handleChangeHoveredLink(link)" @mouseleave="handleChangeHoveredLink(null)"
                         v-for="(link, index) in MENU_LINKS" :key="link.id"
-                        class="text-[48px]/[63.98px] text-light transition-all" :class="{
+                        class="text-[24px]/[28px] md:text-[48px]/[63.98px]  text-light transition-all" :class="{
                             '!text-light opacity-40':
                                 hoverImage && hoverImage.id !== link.id,
                             '!text-dark_green':
@@ -25,7 +25,8 @@ function handleChangeHoveredLink(image: (typeof MENU_LINKS)[0] | null) {
                         <RouterLink :to="link.path">{{ link.label }}</RouterLink>
                         <Transition>
                             <div v-if="hoverImage && link.image === hoverImage.image"
-                                class="absolute z-30 top-[50%] translate-y-[-50%] w-[217px] h-[316px]" :class="index % 2 === 0 ? 'left-[-250px]' : 'right-[-250px]'
+                                class="absolute z-30 bottom-0 md:top-[50%]   md:translate-y-[-50%] w-[105px] h-[150px] md:w-[217px] md:h-[316px]"
+                                :class="index % 2 === 0 ? 'left-[50%] md:left-[-250px] translate-x-[50%]' : 'right-[50%] md:right-[-250px]'
                                     " :style="{
                                         backgroundImage: `url(${link.image})`,
                                         backgroundSize: '100% 100%',
