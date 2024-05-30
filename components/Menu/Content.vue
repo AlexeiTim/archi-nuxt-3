@@ -11,7 +11,7 @@ function handleChangeHoveredLink(image: (typeof MENU_LINKS)[0] | null) {
 
 <template>
     <div class="flex-grow text-center flex items-center justify-center">
-        <div class="w-[271px] h-[475px] relative">
+        <div class="w-[271px] lg:h-[475px] relative">
             <nav>
                 <ul class="flex flex-col gap-10">
                     <li @mouseenter="handleChangeHoveredLink(link)" @mouseleave="handleChangeHoveredLink(null)"
@@ -25,8 +25,8 @@ function handleChangeHoveredLink(image: (typeof MENU_LINKS)[0] | null) {
                         <RouterLink :to="link.path">{{ link.label }}</RouterLink>
                         <Transition>
                             <div v-if="hoverImage && link.image === hoverImage.image"
-                                class="absolute z-30 bottom-0 md:top-[50%]   md:translate-y-[-50%] w-[105px] h-[150px] md:w-[217px] md:h-[316px]"
-                                :class="index % 2 === 0 ? 'left-[50%] md:left-[-250px] translate-x-[50%]' : 'right-[50%] md:right-[-250px]'
+                                class="absolute z-30 bottom-0 md:top-[50%] translate-y-[-50%]   md:translate-y-[-50%] w-[105px] h-[150px] md:w-[217px] md:h-[316px]"
+                                :class="index % 2 === 0 ? 'left-[-50px] md:left-[-250px]  md:translate-x-[10%] ' : 'right-[-50px] md:right-[-250px]'
                                     " :style="{
                                         backgroundImage: `url(${link.image})`,
                                         backgroundSize: '100% 100%',
